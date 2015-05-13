@@ -45,9 +45,13 @@ def get_classifier(lr):
     return GradientBoostingClassifier(learning_rate=lr, n_estimators=400, max_depth=4, min_samples_split=20, random_state = 1) #(0.08, 0.987187)
 
 def run_clf_main(train_file, model_file, cut_str, learning_rate):
+    print "Load File"
     train_x, train_y = load_ins_file(train_file, cut_str)
+    print "Get Classifier"
     clf = get_classifier(learning_rate)
+    print "Fitting..."
     clf.fit(train_x, train_y)
+    print "Dump"
     pickle.dump(clf, file(model_file, 'w'))
 
 def parser_json(setting_json):
