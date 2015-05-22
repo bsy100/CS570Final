@@ -1,5 +1,5 @@
 { 
-    "model_path": "../../output/model/",
+    "model_path": "../../output/model",
     "submission_path": "../../output/submit.csv",
     "data_dir": "../../data",
     "train_csv": "../../data/TrainMergeValid.csv",
