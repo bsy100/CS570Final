@@ -40,12 +40,19 @@ if __name__ == "__main__":
         papers = ' '.join(cols[1:]).split()
         for i, paperId in enumerate(papers):
             if paperId not in papers[:i]:
-                rankPaperId.append((float(predfile.readline()), paperId))
+                tempStr = predfile.readline()
+                if tempStr == "" :
+                    continue
+                rankPaperId.append((float(tempStr), paperId))
             else:
                 predfile.readline()
                 rankPaperId.append((-(10**100), paperId))
         rankPaperId.sort(reverse=True);
-        submitfile.write(authorId + ',' +' '.join(zip(*rankPaperId)[1]) + '\n')
+        try:
+            temp = zip(*rankPaperId)[1]
+            submitfile.write(authorId + ',' +' '.join(temp) + '\n')
+        except IndexError as e:
+            print e
     args.pred.close()
     args.csv.close()
     args.submit.close()

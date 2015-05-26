@@ -4,23 +4,31 @@ python src/train/runGBDT.py --setting $1 --cut_str 4-11_13-35 --learning_rate 0.
 python src/train/runGBDT.py --setting $1 --cut_str 1-11_13-end --learning_rate 0.08 &
 python src/train/runGBDT.py --setting $1 --cut_str 1-35 --learning_rate 0.1 &
 
-bash src/train/runRGF.sh $1 4-11_13-end 0.02 1000 &
-bash src/train/runRGF.sh $1 1-11_13-35 0.01 2000 &
-bash src/train/runRGF.sh $1 1-11_13-end 0.02 1000 &
-bash src/train/runRGF.sh $1 4-11_13-end 0.02 2000 &
-
-
-
-
-bash src/predict/predictRGF.sh $1 4-11_13-end 0.02 1000  &
-bash src/predict/predictRGF.sh $1 1-11_13-35 0.01 2000 &
 bash src/predict/predictGBDT.sh $1 4-11_13-35 0.1 &
 bash src/predict/predictGBDT.sh $1 1-11_13-end 0.08 &
-bash src/predict/predictRGF.sh $1 1-11_13-end 0.02 1000  &
 bash src/predict/predictGBDT.sh $1 1-35 0.1 &
-bash src/predict/predictRGF.sh $1 4-11_13-end 0.02 2000 &
+
+
+Prediction
+
+--setting ../../SETTINGS.json --cut_str 4-11_13-35 --learning_rate 0.1
+--setting ../../SETTINGS.json --cut_str 1-11_13-end --learning_rate 0.08
+--setting ../../SETTINGS.json --cut_str 1-35 --learning_rate 0.1
+
+Submission
+
+-p ../../output/model/GBDT-1-35-0.1.predictions -i ../../data/Test.csv -o ../../output/model/GBDT-1-35-0.1.submissions.csv
+-p ../../output/model/GBDT-4-11_13-35-0.1.predictions -i ../../data/Test.csv -o ../../output/model/GBDT-4-11_13-35-0.1.submissions.csv
 
 
 wait
 
 bash src/predict/postprocess-rule-base-code/run-postprocess.sh $1
+
+--setting $1 --rules_list_file src/predict/postprocess-rule-base-code/rules.list --submission_list_file src/predict/postprocess-rule-base-code/submission.list
+
+--setting SETTINGS.json --submission_list_file submission.list --rules_list_file rules.list
+
+average-rank.py
+
+../../../output/model ensemble.list ../../../output/submit.csv 

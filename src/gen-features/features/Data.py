@@ -15,10 +15,21 @@ class Data:
         self.dading_0523_simi_csv = info_input + '/dading_data/0523_similarity/similarity.feature.csv'
         self.dading_topic_simi_csv = info_input + '/dading_data/topic_similarity/topic.feature.csv'
         self.Conference_csv = info_input + '/Conference.csv'
-        self.Journal_csv = info_input + '/Journal.csv'
+        self.Journal_csv = cbjinfo_input + '/Journal.csv'
 
+        # train_tuples
+        # Assign label 1 to confirmed paper
+        # Assign label 0 to deleted paper
+        # (authorid, paperid, label)
         self.train_tuples = self.read_train_csv(self.train_csv)
+        
+        # valid_tuple
+        # Assign label 0 to all paper
+        #(authorid, paperid, label)
         self.valid_tuples = self.read_valid_csv(self.valid_csv)
+        
+        # paper_info_dictionary
+        # paper ID -> title, year, coference....
         self.paper_info_dict = self.read_paper_csv(self.paper_csv)
         self.author_info_dict = self.read_author_csv(self.author_csv)
         self.paperauthor_tuples = self.read_paperauthor_csv(self.paperauthor_csv)
