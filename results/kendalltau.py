@@ -7,6 +7,7 @@ import sys
 import scipy.stats
 import numpy
 import math
+import difflib
 
 def run_main(cfile, sfile, rfile):
     
@@ -21,23 +22,27 @@ def run_main(cfile, sfile, rfile):
         if not cline: break
         clist1 = cline.split(',')[1]
         clist = clist1.split()
+        print clist
         sline = sf.readline()
         slist1 = sline.split(',')[1]
         slist = slist1.split()
+        print slist
         clen = len(clist)
         slen = len(slist)
         if clen > slen:
             clist = clist[0:slen]
         elif slen > clen:
             slist = slist[0:clen]
-        tau, p_value = scipy.stats.kendalltau(clist, slist)
+        #tau, p_value = scipy.stats.kendalltau(clist, slist)
+        sm = difflib.SequenceMatcher(None,clist,slist)
+        tau = sm.ratio()
         if not numpy.isnan(tau):
             tot_tau += math.fabs(tau)
-            print tot_tau
+            print tau
         idx = idx + 1
     print tot_tau
     result = cfile + "\t" + str(tot_tau) + "\n"
-    # rf.write(result)
+    rf.write(result)
 
 if __name__=='__main__':
     if len(sys.argv) != 3:
