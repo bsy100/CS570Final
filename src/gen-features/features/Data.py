@@ -15,7 +15,7 @@ class Data:
         self.dading_0523_simi_csv = info_input + '/dading_data/0523_similarity/similarity.feature.csv'
         self.dading_topic_simi_csv = info_input + '/dading_data/topic_similarity/topic.feature.csv'
         self.Conference_csv = info_input + '/Conference.csv'
-        self.Journal_csv = cbjinfo_input + '/Journal.csv'
+        self.Journal_csv = info_input + '/Journal.csv'
 
         # train_tuples
         # Assign label 1 to confirmed paper
