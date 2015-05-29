@@ -75,7 +75,8 @@ def mapk(actual, predicted, k=10):
 
 def calculate_map():
 	# Read predictions
-    f = open('data/1-2-0.1.csv')
+    fname = 'data/1-7-0.1.csv'
+    f = open(fname)
     reader = csv.DictReader(f,delimiter=',', skipinitialspace=True)
 
     predictions = []
@@ -84,7 +85,7 @@ def calculate_map():
     f.close()
 
 	# Read actual solutions
-    f = open('data/1-20-0.1.csv')
+    f = open('data/ValidSolution.csv')
     reader = csv.DictReader(f,delimiter=',', skipinitialspace=True)
 
     actuals = []
@@ -96,7 +97,7 @@ def calculate_map():
     result = mapk(actuals, predictions, 10000)
     rf = open("result","a")
     print "Mean Average Precision: ", result
-    rf.write(str(result)+"\n")
+    rf.write(fname + "\t" + str(result)+"\n")
     return result
 
 if __name__=="__main__":
