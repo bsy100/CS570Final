@@ -1,0 +1,116 @@
+1	NumAuthorp		count of authors in the paper
+2	Yearp
+the year of paper
+3
+Cidp
+the conference id of paper
+4
+Jidp
+the journal id of paper
+5
+CountAffp
+count of different affiliations of paper
+6
+CountKwp
+count of keywords of paper
+7
+NumPapera
+count of papers written by the author
+8
+CountCona
+count of papers which were published in Conference by the author
+9
+CountJoua
+count of papers which were published in Journal by the author
+10
+CountConOfPapera,p
+count of papers which were published in the paper’s conference by the author
+11
+CountJouOfPapera,p
+count of papers which were published in the paper’s journal by the author
+12
+CountAppeara,p
+count of the pair of author and paper appeared in the file PaperAuthor.csv
+13
+CountY earOfPapera,p
+count of papers which were published in the paper’s year by the author
+14
+CountSameKwa,p
+count of same keywords between the paper and other papers written by the author
+15
+SumPaperOfCoauthora,p
+the sum count of papers which were written by both author and coauthors
+16
+FlagSameLastNameCoaa,p described in Section 3.4
+17
+CountCoaNotInAutCsva,p
+count of the coauthor which does not appear in the author.csv
+18
+CountCommonSeta,p
+described in Section 3.4
+19 FlagSameWholeNameCoaa,p described in Section 3.4 20
+FlagSameLastNameCoa2a,p described in Section 3.4
+21
+CountSameAffia,p
+described in Section 3.4
+22
+CountSameAffi2a,p
+described in Section 3.4
+23
+
+14
+CountSameKwa,p
+count of same keywords between the paper and other papers written by the author
+15
+SumPaperOfCoauthora,p
+the sum count of papers which were written by both author and coauthors
+16
+FlagSameLastNameCoaa,p described in Section 3.4
+17
+CountCoaNotInAutCsva,p
+count of the coauthor which does not appear in the author.csv
+18
+CountCommonSeta,p
+described in Section 3.4
+19 FlagSameWholeNameCoaa,p described in Section 3.4 20
+FlagSameLastNameCoa2a,p described in Section 3.4
+21
+CountSameAffia,p
+described in Section 3.4
+22
+CountSameAffi2a,p
+described in Section 3.4
+23
+FlagSameNamea,p
+described in Section 3.4
+24
+FlagSameAffia,p
+described in Section 3.4
+25
+FlagSameAffi2a,p
+described in Section 3.4
+26-29
+NameSimiBaseLCPa,p
+the mean, min, max and standard deviation of LCP similarity
+30-33
+NameSimiBaseJaroa,p
+the mean, min, max and standard deviation of Jaro similarity
+34
+CountPaperLista
+the count paper in the author’s predict paper list
+35
+AvgPaperOfCoauthora,p
+the average count of papers which were written by both author and coauthor papers
+36
+RatioOfJoua,p
+CountJouOfPapera,p / CountJoua
+37
+RatioOfCona,p
+CountConOfPapera,p / CountCona
+38
+RatioOfAffia,p
+CountSameAffi2a,p / CountAffp
+39
+RatioOfKwa,p
+CountSameKwa,p / CountKwp
+Table

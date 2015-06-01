@@ -75,7 +75,7 @@ def mapk(actual, predicted, k=10):
 
 def calculate_map():
 	# Read predictions
-    fname = 'data/1-7-0.1.csv'
+    fname = 'data/test.csv'
     f = open(fname)
     reader = csv.DictReader(f,delimiter=',', skipinitialspace=True)
 

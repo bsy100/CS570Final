@@ -1,6 +1,31 @@
-data/1-2-0.1.csv	0.960121703215
-data/1-3-0.1.csv	0.958543336182
-data/1-4-0.1.csv	0.962528410485
-data/1-5-0.1.csv	0.963023526908
-data/1-6-0.1.csv	0.962687035182
-data/1-7-0.1.csv	0.965966312069
+data/1-2-0.1.csv		0.960121703215 : count of authors in the paper + the year of paper
+data/1-3-0.1.csv		0.958543336182 : the conference id of paper
+data/1-4-0.1.csv		0.962528410485 : the journal id of paper
+data/1-5-0.1.csv		0.963023526908 : count of different affiliations of paper
+data/1-6-0.1.csv		0.962687035182 : count of keywords of paper
+
+data/7-8-0.1.csv		0.958257860613 : count of papers written by the author + count of papers which were published in Conference by the author
+data/7-9-0.1.csv		0.957088571056 : count of papers which were published in Journal by the author
+data/7-10-0.1.csv		0.958318689114 : count of papers which were published in the paper's conference by the author
+data/7-11-0.1.csv		0.961777859821 : count of papers which were published in the paper's journal by the author
+data/7-12-0.1.csv		0.96171894391  : count of the pair of author and paper appeared in the file PaperAuthor.csv
+data/7-13-0.1.csv		0.96263747125  : count of papers which were published in the paper's year by the author
+data/7-14-0.1.csv		0.966402505792 : count of same keywords between the paper and other papers written by the author
+
+data/1-7-0.1.csv		0.965966312069 : count of papers written by the author
+data/1-8-0.1.csv		0.965601006182 : count of papers which were published in Conference by the author
+data/1-9-0.1.csv		0.967706353304 : count of papers which were published in Journal by the author
+data/1-10-0.1.csv		0.967247078662 : count of papers which were published in the paper's conference by the author
+data/1-11-0.1.csv		0.965684208607 : count of papers which were published in the paper's journal by the author
+data/1-12-0.1.csv		0.967174001138 : count of the pair of author and paper appeared in the file PaperAuthor.csv
+data/1-13-0.1.csv		0.967820728796 : count of papers which were published in the paper's year by the author
+data/1-14-0.1.csv		0.97178199221  : count of same keywords between the paper and other papers written by the author
+
+data/15-16-0.1.csv	0.96527397559 : the sum count of papers which were written by both author and coauthors + FlagSameLastNameCoaa,p
+data/15-17-0.1.csv	0.966533889531 : CountCoaNotInAutCsva,p
+data/15-18-0.1.csv	0.969106088482 : 
+data/15-19-0.1.csv	0.968465349614
+data/15-20-0.1.csv	0.968791827967
+data/15-21-0.1.csv	0.97037587667
+data/15-22-0.1.csv	0.972066706032
+data/test.csv	0.885501059839
