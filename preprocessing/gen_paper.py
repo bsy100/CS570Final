@@ -24,7 +24,7 @@ def make_stoplist(f):
     return result
 
 def main():
-    f = open("../data/old_data/OldPaper.csv", "r")
+    f = open("../data/old_data/Paper.csv", "r")
     fout = open("../data/Paper.csv", "w")
     f_stop = open("stopwords.txt", "r")
     
